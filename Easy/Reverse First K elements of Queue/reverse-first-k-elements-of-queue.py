@@ -8,8 +8,8 @@ Function Arguments :
 #Function to reverse first k elements of a queue.
 class Solution:
     def modifyQueue(self, q, k):
-        l=list(q)
-        l1=l[k-1::-1]+l[k::]
+        # l=list(q)
+        l1=q[k-1::-1]+q[k::]
         return l1
         
         
