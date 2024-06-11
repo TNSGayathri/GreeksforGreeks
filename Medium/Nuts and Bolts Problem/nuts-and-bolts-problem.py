@@ -3,24 +3,8 @@ class Solution:
 
 	def matchPairs(self, n, nuts, bolts):
 		# code here
-		order = ["!", "#", "$", "%", "&", "*", "?", "@", "^"]
-
-        # Initialize dictionary to count occurrences
-        d = {symbol: 0 for symbol in order}
-    
-        # Count occurrences in nuts
-        for nut in nuts:
-            d[nut] += 1
-    
-        # Initialize index for updating nuts and bolts
-        j = 0
-    
-        # Update nuts and bolts based on order
-        for symbol in order:
-            if d[symbol] != 0:
-                nuts[j] = symbol
-                bolts[j] = symbol
-                j += 1
+		nuts.sort()
+		bolts.sort()
 
 
 #{ 
